@@ -5,6 +5,8 @@
 
 body {
     background-color: #333;
+
+    --error-color: #F4171D;
 }
 
 .title {
@@ -39,8 +41,18 @@ body {
     border-bottom: 2px solid indianred;
 }
 
+.controllers input[type=text].error {
+    outline: 0;
+    border-bottom: 2px solid var(--error-color);
+}
+
+.controllers input[type=text].error:focus {
+    outline: 0;
+    border-bottom: 2px solid var(--error-color);
+}
+
 .controllers input[type=button] {
-    color: white;
+    color: #bbb;
     background-color: #222;
     border-radius: 5px;
     border: 0;
@@ -59,7 +71,11 @@ body {
 
 .result .message {
     width: 90%;
+    padding: 10px 20px;
+    display: block;
+    word-wrap: break-word;
+    color: #ddd;
     margin-left: 5%;
     background-color: #555;
-    height: 200px;
+    min-height: 200px;
 }
